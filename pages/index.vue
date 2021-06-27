@@ -22,6 +22,10 @@
         >
           GitHub
         </a>
+
+        <button @click="buy">
+          Buy
+        </button>
       </div>
     </div>
   </div>
@@ -29,14 +33,33 @@
 
 <script>
 export default {
-  mounted() {
-    window.gDataLayer = window.gDataLayer || []
-    function gtag(){
-      window.gDataLayer.push(arguments)
+  methods: {
+    buy() {
+      this.$gtag('event', 'purchase', {
+        "transaction_id": "1234",
+        "affiliation": "Google online store",
+        "value": 23.07,
+        "currency": "USD",
+        "shipping": 0,
+        "tax": 1.24,
+        "items": [
+          {
+            "id": "P12345", // Note that this is the SKU, not the transaction ID
+            "name": "Android Warhol T-Shirt",
+            "category": "Apparel/T-Shirts",
+            "quantity": 2,
+            "price": '2.0'
+          },
+          {
+            "id": "P67890", // Note that this is the SKU, not the transaction ID
+            "name": "Flame challenge TShirt",
+            "category": "Apparel/T-Shirts",
+            "quantity": 1,
+            "price": '3.0'
+          }
+        ]
+      })
     }
-    gtag('js', new Date())
-
-    gtag('config', 'G-QMXM47TNS4')
   }
 }
 </script>
