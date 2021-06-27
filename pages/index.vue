@@ -36,7 +36,7 @@ export default {
     }
     gtag('js', new Date())
 
-    gtag('config', 'G-LT8B3RY1ZW')
+    gtag('config', 'G-QMXM47TNS4')
   }
 }
 </script>
