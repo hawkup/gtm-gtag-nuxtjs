@@ -28,7 +28,17 @@
 </template>
 
 <script>
-export default {}
+export default {
+  mounted() {
+    window.gDataLayer = window.gDataLayer || []
+    function gtag(){
+      window.gDataLayer.push(arguments)
+    }
+    gtag('js', new Date())
+
+    gtag('config', 'G-LT8B3RY1ZW')
+  }
+}
 </script>
 
 <style>

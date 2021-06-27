@@ -13,6 +13,9 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+    ],
+    script: [
+      { src: 'https://www.googletagmanager.com/gtag/js?id=' + process.env.GTAG_ID + '&l=gDataLayer', async: true }
     ]
   },
 
@@ -41,6 +44,7 @@ export default {
   },
 
   gtm: {
-    id: process.env.GTM_ID
+    enabled: true,
+    id: 'GTM-WZDKLVW'
   }
 }
