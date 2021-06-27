@@ -15,7 +15,7 @@ export default {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ],
     script: [
-      { src: 'https://www.googletagmanager.com/gtag/js?id=' + process.env.GTAG_ID + '&l=gDataLayer', async: true }
+      { src: 'https://www.googletagmanager.com/gtag/js?id=' + process.env.GTAG_ID, async: true }
     ]
   },
 

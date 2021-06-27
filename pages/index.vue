@@ -23,7 +23,7 @@
           GitHub
         </a>
 
-        <button @click="buy">
+        <button id="buy" @click="buy">
           Buy
         </button>
       </div>
@@ -35,7 +35,7 @@
 export default {
   methods: {
     buy() {
-      this.$gtag('event', 'purchase', {
+      this.$gtag('event', 'purchase2', {
         "transaction_id": "1234",
         "affiliation": "Google online store",
         "value": 23.07,

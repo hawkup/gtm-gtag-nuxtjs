@@ -1,7 +1,7 @@
 export default (_, inject) => {
-  window.gDataLayer = window.gDataLayer || []
+  window.dataLayer = window.gDataLayer || []
   function gtag(){
-    window.gDataLayer.push(arguments)
+    window.dataLayer.push(arguments)
   }
   inject('gtag', gtag)
 
